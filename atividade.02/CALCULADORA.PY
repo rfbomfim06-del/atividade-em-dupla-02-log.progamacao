@@ -1,4 +1,5 @@
 import os
+import time
 os.system('cls')
 
 while True:
@@ -13,6 +14,7 @@ while True:
             break
         case '-':
             resultado = primeiro_numero - segundo_numero
+            break
         case '*':
             resultado = primeiro_numero * segundo_numero
             break
@@ -20,11 +22,12 @@ while True:
             resultado = primeiro_numero / segundo_numero
             break
         case _:
-            print('Opção inválida!')
-            break
+            print('Opção inválida! Tente novamente....')
+            time.sleep(1)
+            os.system('cls')
 
 
-    print(f'O 1º número é: {primeiro_numero}')
-    print(f'O 2º número é: {segundo_numero}')
-    print(f'O operador escolhido é: {operador}')
-    print(f'O resultado é: {resultado}')
+print(f'\nO 1º número é: {primeiro_numero}')
+print(f'O 2º número é: {segundo_numero}')
+print(f'O operador escolhido é: {operador}')
+print(f'O resultado é: {resultado}')
