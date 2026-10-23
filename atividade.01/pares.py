@@ -11,7 +11,8 @@ for i in range(QUANTIDADE_DE_REPEDICAO):
         pares = pares + 1
     else:
         impares = impares + 1
-soma = numero + soma
+    soma = numero + soma
 print(f'quatidade de pares:{pares}')
 print(f'quatidade de impares:{impares}')
 print(f'soma:{soma}')
+
