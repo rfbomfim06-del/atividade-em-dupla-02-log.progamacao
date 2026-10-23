@@ -5,17 +5,13 @@ renda_mensal = float(input('Digite a sua renda mensal: R$'))
 emprestimo = float(input('Digite o valor do empréstimo pedido: R$'))
 parcelas = int(input('Digite a quantidade de parcelas: '))
 
+prestacao = emprestimo / parcelas
 max_emprestimo = renda_mensal * 10
-max_parcelas = renda_mensal * 0.3
+max_prestacao = renda_mensal * 0.3
 
-print(f'O valor da prestração é: {parcelas}')
+print(f'O valor da prestação é: R${prestacao:.3f}')
 
-if emprestimo <= max_emprestimo:
-    print('Valor aceito!')
+if emprestimo <= max_emprestimo and prestacao <= max_prestacao:
+    print('Empréstimo aprovado!')
 else:
-    print('Valor inválido.')
-
-if parcelas <= max_parcelas:
-    print('Parcelas aceitas!')
-else:
-    print('Quantidade de parcelas negadas!')
+    print('Empréstimo negado.')
